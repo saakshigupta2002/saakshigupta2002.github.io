@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Saakshi Gupta | Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body id="projects-page">
+    <header class="top-navbar">
+        <a href="index.html" class="site-logo">sa.sh</a>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile-section">
+                    <div class="profile-image-wrapper">
+                        <img src="images/me.jpeg" alt="Saakshi Gupta" class="profile-photo">
+                        <div class="profile-status"></div>
+                    </div>
+                    <h1 class="profile-name">Saakshi Gupta</h1>
+                    <p class="profile-title">AI Enthusiast</p>
+                    <p class="profile-location">Adelaide, Australia</p>
+                </div>
+
+                <nav class="nav-menu">
+                </nav>
+
+                <div class="social-links">
+                    <a href="https://github.com/saakshigupta2002" class="social-link" target="_blank">
+                        <img src="images/icons/github-icon.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/saakshigupta-" class="social-link" target="_blank">
+                        <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto:saakshigupta2002@gmail.com" class="social-link">
+                        <img src="images/icons/email-icon.png" alt="Email">
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="projects-section" class="section">
+                <div class="section-header">
+                    <h2 class="section-heading">Featured Projects</h2>
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card" id="videospec"
+                        data-full-description="Designed and built a multimodal video-analysis platform using Google Gemini Vision API, AWS Nova API and Python. Implemented asynchronous processing with asyncio, custom URL extraction and video embedding to analyse content across TikTok, Instagram and direct MP4 sources with over 15 classification parameters. Engineered a modular full-stack architecture with Streamlit, AWS S3 integration and OAuth2-authenticated Google Sheets API, providing real-time progress tracking and automated data transformation.">
+                        <div class="project-icon">🎬</div>
+                        <h3>
+                        VideoSpec
+                        <span class="project-company">Multimodal Content Analysis</span>
+                        </h3>
+                        <p>Designed and built a multimodal video-analysis platform using Google Gemini Vision API, AWS Nova API and Python with async processing and 15+ classification parameters.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Gemini Vision API</span>
+                            <span class="tech-pill">AWS Nova</span>
+                            <span class="tech-pill">Streamlit</span>
+                            <span class="tech-pill">asyncio</span>
+                            <span class="tech-pill">AWS S3</span>
+                            <span class="tech-pill">OAuth2</span>
+                            <span class="tech-pill">Google Sheets API</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" id="aim-ai"
+                        data-full-description="Developed an AI-powered interviewer chatbot by fine-tuning the Mistral-7B language model using the QLoRA method, achieving an 18% improvement in Rouge-1 scores over the base model. Integrated speech-to-text using the Faster Whisper model with CTranslate2 to support audio input processing four times faster than the original Whisper model. Implemented speaking-pace analysis to maintain an optimal pace of 1–3 words per second.">
+                        <div class="project-icon">🤖</div>                       
+                        <h3>AIM AI <span class="project-company">AI Interviewer</span></h3>
+                        <p>Developed an AI-powered interviewer chatbot by fine-tuning Mistral-7B using QLoRA, achieving 18% improvement in Rouge-1 scores with integrated speech-to-text processing 4x faster than original Whisper.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Mistral-7B</span>
+                            <span class="tech-pill">QLoRA</span>
+                            <span class="tech-pill">Fine-tuning</span>
+                            <span class="tech-pill">Faster Whisper</span>
+                            <span class="tech-pill">CTranslate2</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Speech-to-Text</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" id="deepfake-detection"
+                        data-full-description="Created a multimodal deepfake analysis system integrating CNN/Vision Transformer detection, explainable AI techniques (SHAP, LIME) and image-to-text captioning with CLIP and attention mechanisms. Implemented a large-language-model contextual explanation module using Llama 3.1 and Ollama with custom prompt engineering to generate forensic insights. Developed a unified Python pipeline with PyTorch and Hugging Face Transformers and deployed RESTful APIs for integration."
+                        data-demo-link="https://drive.google.com/file/d/1mQwquNxMFo-MwqUt5p2VNxpezJFIViQD/view?usp=sharing">
+                        <div class="project-icon">🔍</div>                        
+                        <h3>DF-P2E: Deepfake Detection <span class="project-company">CSIRO Research</span></h3>
+                        <p>Created a multimodal deepfake analysis system integrating CNN/Vision Transformer detection with explainable AI techniques (SHAP, LIME) and LLM-powered forensic insights using Llama 3.1.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">PyTorch</span>
+                            <span class="tech-pill">Vision Transformers</span>
+                            <span class="tech-pill">CNNs</span>
+                            <span class="tech-pill">SHAP</span>
+                            <span class="tech-pill">LIME</span>
+                            <span class="tech-pill">CLIP</span>
+                            <span class="tech-pill">Llama 3.1</span>
+                            <span class="tech-pill">Hugging Face</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" id="creator-matching"
+                        data-full-description="Led development of algorithms that analysed millions of creator profiles and matched their content styles with brand campaign requirements using advanced natural-language processing and computer-vision techniques. Built an LLM-driven system to generate personalised campaign briefs for creators based on historical performance, brand guidelines and campaign objectives. Developed machine-learning pipelines to track and analyse creator content engagement across multiple social media platforms.">
+                        <div class="project-icon">📊</div>                        
+                        <h3>Creator-Brand Matching System <span class="project-company">LINQIA</span></h3>
+                        <p>Developed algorithms analyzing millions of creator profiles with NLP and computer vision, matching content styles to brand requirements with LLM-driven campaign brief generation.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">NLP</span>
+                            <span class="tech-pill">Computer Vision</span>
+                            <span class="tech-pill">LLMs</span>
+                            <span class="tech-pill">Machine Learning</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Data Pipelines</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" id="energy-analysis"
+                        data-full-description="Developed a software tool to track and analyse energy-project trends using AEMO data, improving insight into energy transition dynamics. Designed a machine-learning approach for energy transition model calibration that reduced estimation errors by approximately 15% compared with traditional methods. Led deep-learning analysis of methane LiDAR inversion algorithms, streamlining data-processing pipelines and documenting optimization opportunities to enhance emission detection accuracy.">
+                        <div class="project-icon">⚡</div>                        
+                        <h3>Energy Transition Analysis <span class="project-company">UQ Research</span></h3>
+                        <p>Developed ML tools for energy-project trend analysis using AEMO data, achieving ~15% reduction in estimation errors for energy transition model calibration.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Machine Learning</span>
+                            <span class="tech-pill">Deep Learning</span>
+                            <span class="tech-pill">Data Analysis</span>
+                            <span class="tech-pill">LiDAR</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" id="quicksettle"
+                        data-full-description="Co-developed 'QuickSettle,' a group payments app with shareable links and automated reminders. Presented at the Gold Coast Engineering Hub as a Westpac Hackathon 2024 Finalist.">
+                        <div class="project-icon">💰</div>
+                        <h3>QuickSettle <span class="project-company">Westpac Hackathon</span></h3>
+                        <p>Co-developed a group payments app with shareable links and automated reminders, presented at the Gold Coast Engineering Hub as a Hackathon Finalist.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">FinTech</span>
+                            <span class="tech-pill">App Development</span>
+                            <span class="tech-pill">Hackathon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-card note-card fade-in">
+                    <p class="intro-text">
+                        Want to learn more about my work? Check out my <a href="https://github.com/saakshigupta2002" target="_blank" class="inline-link">GitHub profile</a> or connect with me on <a href="https://linkedin.com/in/saakshigupta-" target="_blank" class="inline-link">LinkedIn</a>!
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="footer-background">
+        <div class="contact-footer">
+            <p>© 2025 Saakshi Gupta. All rights reserved.<br>Made with ❤️ using HTML, CSS, and JavaScript.</p>
+        </div>
+    </div>
+
+    <div id="projectDetailModal" class="modal">
+        <span class="close-button">&times;</span>
+        <div class="modal-content project-modal-content">
+            <h2 id="projectModalTitle"></h2>
+            <div id="projectModalImages" class="project-modal-images">
+                </div>
+            <p id="projectModalDescription"></p>
+            <div id="projectModalTech" class="project-tech">
+                </div>
+            <div class="project-modal-links">
+                <a id="projectModalGithubLink" href="#" target="_blank" class="github-button" style="display: none;">
+                    <img src="images/icons/github-icon.png" alt="GitHub Icon"> View on GitHub
+                </a>
+                <a id="projectModalDemoLink" href="#" target="_blank" class="demo-button" style="display: none;">
+                    ▶ Watch Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption" class="modal-caption"></div>
+    </div>
+
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
