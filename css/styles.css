@@ -1711,20 +1711,41 @@ a:hover {
 .demo-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     color: var(--bg-primary);
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .demo-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(34, 211, 238, 0.4);
+}
+
+.huggingface-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #FFD21E, #FF9D00);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.huggingface-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 210, 30, 0.4);
 }
 
 .project-modal-tech {
