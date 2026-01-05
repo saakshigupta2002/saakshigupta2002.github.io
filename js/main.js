@@ -319,6 +319,12 @@ const projectDetailModalHandler = (() => {
         if (githubLink) {
             projectModalGithubLink.href = githubLink;
             projectModalGithubLink.style.display = 'flex';
+            // Update button text based on link type
+            if (githubLink.includes('huggingface.co')) {
+                projectModalGithubLink.innerHTML = '<img src="images/icons/github-icon.png" alt="Code Icon"> View on Hugging Face';
+            } else {
+                projectModalGithubLink.innerHTML = '<img src="images/icons/github-icon.png" alt="GitHub Icon"> View on GitHub';
+            }
         } else {
             projectModalGithubLink.style.display = 'none';
         }
