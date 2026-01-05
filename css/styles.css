@@ -1704,12 +1704,13 @@ a:hover {
 .project-modal-links {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
 .demo-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
@@ -1720,6 +1721,7 @@ a:hover {
     border-radius: 8px;
     font-weight: bold;
     font-size: 0.85rem;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1729,7 +1731,7 @@ a:hover {
 }
 
 .huggingface-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
@@ -1740,6 +1742,7 @@ a:hover {
     border-radius: 8px;
     font-weight: bold;
     font-size: 0.85rem;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1838,20 +1841,20 @@ a:hover {
 }
 
 .github-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     background-color: #24292e;
     border: 2px solid #24292e;
     border-radius: 8px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.85rem;
+    height: auto;
     transition: all var(--transition-speed) ease;
-    margin-top: 2rem;
-    align-self: flex-start;
 }
 
 .github-button:hover {
