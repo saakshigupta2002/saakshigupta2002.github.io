@@ -241,8 +241,17 @@ const imageModalHandler = (() => {
 
     const handleImageClick = (e) => {
         // This handler is for images outside the project modal, or for fallback
-        const img = e.target.closest('img[data-full-src], img.project-modal-image'); // Also target project-modal-image if it somehow gets here
-        if (img) {
+        const img = e.target.closest('img[data-full-src], img.project-modal-image, .gallery-item img'); // Also target gallery images
+        if (img && !e.target.closest('.project-modal-content')) { // Don't open if clicking inside project modal
+            e.preventDefault();
+            e.stopPropagation();
+            // Ensure data-full-src is set for gallery images
+            if (!img.getAttribute('data-full-src')) {
+                img.setAttribute('data-full-src', img.src);
+            }
+            if (!img.getAttribute('data-caption')) {
+                img.setAttribute('data-caption', img.alt);
+            }
             openImageDirectly(img);
         }
     };

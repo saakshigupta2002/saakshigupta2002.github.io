@@ -63,7 +63,7 @@
                     <div class="gallery-container">
                         <!-- Graduation & Achievements -->
                         <div class="gallery-item zoom-hover">
-                            <img src="images/gallery/UQ_Graduation_with_mom.jpeg" alt="UQ Graduation with Mom" data-caption="UQ Graduation Day with Mom">
+                            <img src="images/gallery/UQ_Graduation_with_mom.jpeg" alt="UQ Graduation with Mom" data-caption="UQ Graduation Day with Mom" data-full-src="images/gallery/UQ_Graduation_with_mom.jpeg" style="cursor: pointer;">
                             <div class="gallery-overlay">
                                 <h3>Graduation Day</h3>
                                 <p>With Mom</p>
@@ -354,5 +354,20 @@
     </button>
 
     <script src="js/main.js"></script>
+    <script>
+        // Make all gallery images clickable
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryImages = document.querySelectorAll('.gallery-item img');
+            galleryImages.forEach(img => {
+                if (!img.getAttribute('data-full-src')) {
+                    img.setAttribute('data-full-src', img.src);
+                }
+                if (!img.getAttribute('data-caption')) {
+                    img.setAttribute('data-caption', img.alt);
+                }
+                img.style.cursor = 'pointer';
+            });
+        });
+    </script>
 </body>
 </html>

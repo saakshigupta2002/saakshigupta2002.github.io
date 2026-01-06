@@ -1954,15 +1954,19 @@ a:hover {
 /* Blog Section Styles */
 .blog-card-style {
     cursor: default;
+    min-height: 280px;
 }
 
 .blog-card-style:hover {
     cursor: default;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.3);
+    border-color: var(--accent-primary);
 }
 
 .blog-date {
     color: var(--text-secondary);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-bottom: 0.5rem;
     font-style: italic;
 }
@@ -1971,16 +1975,16 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.25rem;
+    padding: 0.6rem 1rem;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     color: var(--bg-primary);
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 1rem;
+    margin-top: auto;
     width: fit-content;
 }
 
