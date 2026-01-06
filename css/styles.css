@@ -382,12 +382,16 @@ body.menu-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
     padding-right: 1rem;
     width: 100%;
     box-sizing: border-box;
+}
+
+#contact-section .section-header {
+    margin-bottom: 1rem;
 }
 
 .section-heading {
@@ -434,13 +438,13 @@ body.menu-open {
 }
 
 .content-card-contact {
-    padding: 9.5rem;
+    padding: 1.5rem;
     border-radius: 12px;
 }
 
 @media (max-width: 768px) {
     .content-card-contact {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }
 
