@@ -129,9 +129,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // Initialize EmailJS
-        // TODO: Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
-        // Get it from: https://dashboard.emailjs.com/admin/integration
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("vg0yeFH__g7ehtFL9");
 
         // Handle form submission
         document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -155,9 +153,7 @@
             };
             
             // Send email using EmailJS
-            // TODO: Replace 'YOUR_TEMPLATE_ID' with your actual Template ID
-            // Get it from: https://dashboard.emailjs.com/admin/template
-            emailjs.send('service_blrmvtb', 'YOUR_TEMPLATE_ID', formData)
+            emailjs.send('service_blrmvtb', 'template_33wv4wo', formData)
                 .then(function(response) {
                     // Success
                     formMessage.className = 'form-message success';

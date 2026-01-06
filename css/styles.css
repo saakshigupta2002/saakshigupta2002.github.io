@@ -1038,7 +1038,7 @@ em {
 
 .contact-methods-sidebar {
     background-color: var(--bg-secondary);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     display: flex;
@@ -1048,23 +1048,23 @@ em {
 
 .contact-methods-sidebar h3 {
     color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .contact-methods-vertical {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .contact-note-sidebar {
     margin-top: auto;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     border-top: 1px solid var(--border-color);
 }
 
@@ -1072,13 +1072,14 @@ em {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     background-color: var(--bg-secondary);
     border: 2px solid var(--accent-primary);
     border-radius: 8px;
     color: var(--accent-primary);
     text-decoration: none;
     transition: all var(--transition-speed) ease;
+    font-size: 0.9rem;
 }
 
 .contact-button:hover {
@@ -1117,7 +1118,7 @@ em {
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: start;
 }
 
@@ -1131,32 +1132,32 @@ em {
 /* Contact Form Styles */
 .contact-form-container {
     background-color: var(--bg-secondary);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
 }
 
 .contact-form-container h3 {
     color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .form-group label {
     color: var(--text-primary);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -1166,10 +1167,10 @@ em {
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 0.875rem 1rem;
+    padding: 0.65rem 0.875rem;
     color: var(--text-primary);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     width: 100%;
 }
@@ -1195,7 +1196,7 @@ em {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 80px;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -1203,14 +1204,14 @@ em {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
     background-color: var(--bg-secondary);
     border: 2px solid var(--accent-primary);
     border-radius: 8px;
     color: var(--accent-primary);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
