@@ -59,6 +59,33 @@
                 </div>
                 
                 <div class="content-card-contact fade-in">
+                    <div class="contact-form-container">
+                        <h3 style="color: white; margin-bottom: 1.5rem; text-align: center;">Send me a message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">
+                                <span>Submit</span>
+                                <span class="submit-icon">✈</span>
+                            </button>
+                            <div id="form-message" class="form-message"></div>
+                        </form>
+                    </div>
+
+                    <div class="contact-divider">
+                        <span>OR</span>
+                    </div>
+
                     <div class="contact-methods">
                         <a href="mailto:saakshigupta2002@gmail.com" class="contact-button pulse">
                             <img src="images/icons/email-icon.png" alt="Email">
@@ -97,5 +124,62 @@
     </button>
 
     <script src="js/main.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        // TODO: Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
+        // Get it from: https://dashboard.emailjs.com/admin/integration
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const submitButton = this.querySelector('.submit-button');
+            const formMessage = document.getElementById('form-message');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Sending...</span>';
+            formMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                to_email: 'saakshigupta2002@gmail.com' // Your email
+            };
+            
+            // Send email using EmailJS
+            // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            // Get them from: https://dashboard.emailjs.com/admin
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(function(response) {
+                    // Success
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    document.getElementById('contact-form').reset();
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                }, function(error) {
+                    // Error
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                });
+        });
+    </script>
 </body>
 </html>
