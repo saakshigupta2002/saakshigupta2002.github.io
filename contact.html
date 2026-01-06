@@ -155,9 +155,9 @@
             };
             
             // Send email using EmailJS
-            // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-            // Get them from: https://dashboard.emailjs.com/admin
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            // TODO: Replace 'YOUR_TEMPLATE_ID' with your actual Template ID
+            // Get it from: https://dashboard.emailjs.com/admin/template
+            emailjs.send('service_blrmvtb', 'YOUR_TEMPLATE_ID', formData)
                 .then(function(response) {
                     // Success
                     formMessage.className = 'form-message success';
