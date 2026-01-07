@@ -526,6 +526,48 @@ em {
     justify-content: center;
 }
 
+.tech-grid-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-secondary) var(--bg-primary);
+}
+
+.tech-grid-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tech-grid-scroll::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+    border-radius: 3px;
+}
+
+.tech-grid-scroll::-webkit-scrollbar-thumb {
+    background: var(--accent-secondary);
+    border-radius: 3px;
+}
+
+.tech-grid-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+}
+
+.tech-grid-scroll .tech-item {
+    flex: 0 0 auto;
+    min-width: 80px;
+}
+
+.tech-icon-text {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+}
+
 .tech-item {
     display: flex;
     flex-direction: column;
