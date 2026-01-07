@@ -2193,6 +2193,21 @@ a:hover {
     color: white;
 }
 
+.certificate-link {
+    display: inline-block;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    transition: color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.certificate-link:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
 /* Skills Categories */
 .skills-categories {
     margin-top: 1.5rem;
