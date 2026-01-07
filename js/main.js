@@ -599,6 +599,24 @@ const typingEffect = (() => {
 })();
 
 
+// Module for tech item documentation links
+const techItemHandler = (() => {
+    const init = () => {
+        document.querySelectorAll('.tech-item[data-doc-link]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const docLink = item.getAttribute('data-doc-link');
+                if (docLink) {
+                    window.open(docLink, '_blank');
+                }
+            });
+        });
+    };
+
+    return {
+        init
+    };
+})();
+
 // Initialize all modules when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     mobileMenuHandler.init();
@@ -609,4 +627,5 @@ document.addEventListener('DOMContentLoaded', () => {
     horizontalGalleryHandler.init();
     rippleEffect.init();
     typingEffect.init();
+    techItemHandler.init();
 });
