@@ -521,9 +521,9 @@ em {
 /* Tech Grid */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
-    gap: 1rem;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(48px, max-content));
+    gap: 0.4rem;
+    justify-content: start;
 }
 
 .tech-grid-scroll {
@@ -578,11 +578,11 @@ em {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 80px;
-    height: 100px;
-    padding: 0.75rem;
+    width: 48px;
+    height: 60px;
+    padding: 0.35rem;
     background-color: var(--bg-tertiary);
-    border-radius: 8px;
+    border-radius: 5px;
     transition: all var(--transition-speed) ease;
     cursor: pointer;
     box-sizing: border-box;
@@ -607,17 +607,18 @@ em {
 }
 
 .tech-item img {
-    width: 36px;
-    height: 36px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
     filter: drop-shadow(0 0.001px 10px rgba(255, 255, 255, 0.417));
 }
 
 .tech-item span {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     color: var(--text-secondary);
     text-align: center;
+    line-height: 1.2;
 }
 
 .tech-hover-detail {
@@ -779,16 +780,52 @@ em {
 .timeline-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    gap: 0.3rem;
+    margin-top: 0.75rem;
 }
 
 .tag {
     background-color: var(--bg-tertiary);
     color: var(--text-secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 12px;
+    font-size: 0.4rem;
+    line-height: 1.3;
+}
+
+/* Timeline content links - improved visibility */
+.timeline-content a:not(.timeline-link) {
+    color: #67e8f9; /* Brighter cyan for better contrast */
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+.timeline-content a:not(.timeline-link):hover {
+    color: #ffffff; /* White on hover for maximum visibility */
+    text-decoration: underline;
+}
+
+.timeline-link {
+    display: inline-block !important;
+    color: #67e8f9 !important; /* Brighter cyan for better contrast */
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    transition: color var(--transition-speed) ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+    line-height: 1.5 !important;
+}
+
+.timeline-link:hover {
+    color: #ffffff !important; /* White on hover for maximum visibility */
+    text-decoration: underline !important;
 }
 
 .footer-background {
@@ -1677,7 +1714,7 @@ a {
     transition: color var(--transition-speed) ease;
 }
 
-a:hover {
+a:hover:not(.timeline-link):not(.publication-link) {
     color: var(--accent-primary);
 }
 
