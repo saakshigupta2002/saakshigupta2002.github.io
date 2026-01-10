@@ -859,18 +859,9 @@ em {
     margin-bottom: 2rem;
 }
 
-/* Blog grid - half width */
+/* Blog grid - same as projects grid */
 .blogs-page .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-    .blogs-page .projects-grid {
-        max-width: 100%;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-card {
