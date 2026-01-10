@@ -1986,6 +1986,12 @@ a:hover:not(.timeline-link):not(.publication-link) {
     margin-bottom: 1.5rem;
 }
 
+.project-modal-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .project-modal-image {
     width: 100%;
     height: 180px;
@@ -1998,6 +2004,14 @@ a:hover:not(.timeline-link):not(.publication-link) {
 
 .project-modal-image:hover {
     transform: scale(1.05);
+}
+
+.project-modal-image-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 0.25rem 0;
 }
 
 .project-modal-links {

@@ -355,16 +355,47 @@ const projectDetailModalHandler = (() => {
         const images = card.dataset.images ? card.dataset.images.split(',') : [];
         if (images.length > 0) {
             images.forEach(src => {
+                // Create container for image and caption
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('project-modal-image-container');
+                
                 const img = document.createElement('img');
                 img.src = src.trim(); // Use src for actual image display
                 img.alt = projectModalTitle.textContent + " image";
                 img.classList.add('project-modal-image');
+                
+                // Extract classification from filename
+                const filename = src.trim().split('/').pop().replace('.png', '').replace('.jpg', '').replace('.jpeg', '');
+                let classification = filename;
+                // Convert filename to readable classification
+                if (filename.includes('Alzheimers_Disease') || filename.includes('Alzheimers')) {
+                    classification = "Alzheimer's Disease";
+                } else if (filename.includes('Normal_Cognition') || filename.includes('Normal')) {
+                    classification = "Normal Cognition";
+                } else {
+                    // Convert snake_case or camelCase to Title Case
+                    classification = filename
+                        .replace(/_/g, ' ')
+                        .replace(/([A-Z])/g, ' $1')
+                        .replace(/^./, str => str.toUpperCase())
+                        .trim();
+                }
+                
+                // Create caption element
+                const caption = document.createElement('div');
+                caption.classList.add('project-modal-image-caption');
+                caption.textContent = classification;
+                
                 // Store the full resolution source in a data attribute for the lightbox
                 img.setAttribute('data-full-src', src.trim()); // Ensure data-full-src is set
-                img.setAttribute('data-caption', projectModalTitle.textContent); // Set a caption for the lightbox
+                img.setAttribute('data-caption', classification); // Set caption for the lightbox
                 // Call the new direct function from imageModalHandler
                 img.addEventListener('click', () => imageModalHandler.openImageDirectly(img));
-                projectModalImages.appendChild(img);
+                
+                // Append image and caption to container
+                imageContainer.appendChild(img);
+                imageContainer.appendChild(caption);
+                projectModalImages.appendChild(imageContainer);
             });
             projectModalImages.style.display = 'grid';
         } else {
