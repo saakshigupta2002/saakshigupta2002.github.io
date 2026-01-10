@@ -2305,24 +2305,29 @@ a:hover:not(.timeline-link):not(.publication-link) {
 }
 
 .blog-read-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.875rem;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    color: var(--bg-primary);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: auto;
-    width: fit-content;
+    display: inline-block;
+    color: #67e8f9;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    padding: 0;
+    transition: color var(--transition-speed) ease;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    background: none;
+    border: none;
+    border-radius: 0;
 }
 
 .blog-read-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.4);
+    color: #ffffff;
+    text-decoration: underline;
+    transform: none;
+    box-shadow: none;
 }
 
