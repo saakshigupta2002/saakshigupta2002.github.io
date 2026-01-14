@@ -2347,9 +2347,20 @@ a:hover:not(.timeline-link):not(.publication-link) {
 
 /* Tech Info Modal Styles */
 .tech-modal-content {
-    max-width: 500px;
-    text-align: center;
+    background-color: var(--bg-secondary);
     padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    text-align: center;
 }
 
 .tech-modal-header {
@@ -2357,7 +2368,7 @@ a:hover:not(.timeline-link):not(.publication-link) {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
 }
 
 .tech-modal-icon {
@@ -2368,7 +2379,7 @@ a:hover:not(.timeline-link):not(.publication-link) {
     justify-content: center;
     background: linear-gradient(135deg, rgba(103, 232, 249, 0.1), rgba(147, 51, 234, 0.1));
     border-radius: 1rem;
-    border: 1px solid rgba(103, 232, 249, 0.2);
+    border: 1px solid var(--border-color);
 }
 
 .tech-modal-icon img {
@@ -2382,16 +2393,20 @@ a:hover:not(.timeline-link):not(.publication-link) {
 }
 
 .tech-modal-content h2 {
-    color: var(--accent-primary);
+    color: white;
     font-size: 1.8rem;
     margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    width: 100%;
 }
 
 .tech-modal-description {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .tech-doc-button {
@@ -2407,6 +2422,7 @@ a:hover:not(.timeline-link):not(.publication-link) {
     text-decoration: none;
     transition: all var(--transition-speed) ease;
     box-shadow: 0 4px 15px rgba(103, 232, 249, 0.3);
+    margin-top: 0.5rem;
 }
 
 .tech-doc-button:hover {
