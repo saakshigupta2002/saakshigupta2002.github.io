@@ -317,7 +317,8 @@
                     <div class="project-card" id="futurevest-preview"
                         data-full-description="FutureVest is a web-based stock analysis platform that helps investors value stocks and discover growth opportunities across thousands of U.S. equities. It provides stock search, screening, watchlists, price alerts, technical analysis, and valuation tools. The platform uses a microservices architecture with containerized services deployed on AWS, enabling scalability and maintainability. Built with React/TypeScript frontend and Flask backend, deployed on AWS ECS Fargate with RDS PostgreSQL, featuring Docker containerization, JWT authentication, and Nginx reverse proxy for scalable, cloud-native architecture. Developed as part of CSSE6400 group project at UQ."
                         data-demo-link="https://www.youtube.com/watch?v=dNfTGW1w-aw"
-                        data-github-link="https://github.com/saakshigupta2002/FutureVest">
+                        data-github-link="https://github.com/saakshigupta2002/FutureVest"
+                        data-images="images/project/FutureVest.png,images/project/FutureVest_Stock_Scanner.png">
                         <div class="project-icon">📈</div>
                         <h3>FutureVest <span class="project-company">Stock Analysis | CSSE6400</span></h3>
                         <p>A web-based stock analysis platform helping investors value stocks and discover growth opportunities with screening, watchlists, alerts, and technical analysis tools.</p>
@@ -333,7 +334,8 @@
                     <div class="project-card" id="cofounder-matching-preview"
                         data-full-description="A mobile app that connects entrepreneurs with potential co-founders using an algorithm that evaluates compatibility across skills, interests, goals, startup stage, location, availability, and collaboration style. Users create profiles, receive personalized match recommendations with explanations, and interact through in-app messaging and event management. The platform uses a weighted scoring system to surface compatible matches and help users make informed decisions. Key features include multi-factor matching algorithm, real-time authentication, swipeable match interface, in-app messaging, and event calendar management. Developed as part of DECO3801 group project at UQ."
                         data-github-link="https://github.com/saakshigupta2002/Co-Founder-Matching"
-                        data-demo-link="https://drive.google.com/file/d/1xez-tBBpEBgXvrYNbOPn_La0YoZJnHVT/view?usp=sharing">
+                        data-demo-link="https://drive.google.com/file/d/1xez-tBBpEBgXvrYNbOPn_La0YoZJnHVT/view?usp=sharing"
+                        data-images="images/project/co-founder-matching.jpg">
                         <div class="project-icon">🤝</div>                       
                         <h3>Co-Founder Matching <span class="project-company">UQ Ventures | DECO3801</span></h3>
                         <p>A mobile app connecting entrepreneurs with potential co-founders using a multi-factor matching algorithm evaluating skills, interests, goals, and collaboration style.</p>
@@ -349,7 +351,8 @@
                     <div class="project-card" id="deepfake-detection-preview"
                         data-full-description="Created a multimodal deepfake analysis system integrating CNN/Vision Transformer detection, explainable AI techniques (SHAP, LIME) and image-to-text captioning with CLIP and attention mechanisms. Implemented a large-language-model contextual explanation module using Llama 3.1 and Ollama with custom prompt engineering to generate forensic insights. Developed a unified Python pipeline with PyTorch and Hugging Face Transformers and deployed RESTful APIs for integration."
                         data-demo-link="https://drive.google.com/file/d/1mQwquNxMFo-MwqUt5p2VNxpezJFIViQD/view?usp=sharing"
-                        data-huggingface-link="https://huggingface.co/spaces/saakshigupta/deepfake_detection_uq/tree/main">
+                        data-huggingface-link="https://huggingface.co/spaces/saakshigupta/deepfake_detection_uq/tree/main"
+                        data-images="images/project/deepfake-analyzer-homepage.png,images/project/deepfake-chat-analysis.png">
                         <div class="project-icon">🔍</div>                        
                         <h3>DF-P2E: Deepfake Detection <span class="project-company">CSIRO Research</span></h3>
                         <p>Created a multimodal deepfake analysis system integrating CNN/Vision Transformer detection with explainable AI techniques and LLM-powered forensic insights.</p>
@@ -476,6 +479,20 @@
         <span class="close-button">&times;</span>
         <img class="modal-content" id="modalImage">
         <div id="caption" class="modal-caption"></div>
+    </div>
+
+    <div id="techInfoModal" class="modal">
+        <span class="close-button">&times;</span>
+        <div class="modal-content tech-modal-content">
+            <div class="tech-modal-header">
+                <div id="techModalIcon" class="tech-modal-icon"></div>
+                <h2 id="techModalTitle"></h2>
+            </div>
+            <p id="techModalDescription" class="tech-modal-description"></p>
+            <a id="techModalDocLink" href="#" target="_blank" class="tech-doc-button">
+                📖 View Documentation
+            </a>
+        </div>
     </div>
 
     <button class="mobile-menu-toggle" aria-label="Toggle menu">

@@ -2345,3 +2345,97 @@ a:hover:not(.timeline-link):not(.publication-link) {
     box-shadow: none;
 }
 
+/* Tech Info Modal Styles */
+.tech-modal-content {
+    max-width: 500px;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.tech-modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-modal-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(103, 232, 249, 0.1), rgba(147, 51, 234, 0.1));
+    border-radius: 1rem;
+    border: 1px solid rgba(103, 232, 249, 0.2);
+}
+
+.tech-modal-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.tech-icon-emoji {
+    font-size: 2.5rem;
+}
+
+.tech-modal-content h2 {
+    color: var(--accent-primary);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.tech-modal-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.tech-doc-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--bg-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(103, 232, 249, 0.3);
+}
+
+.tech-doc-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(103, 232, 249, 0.4);
+}
+
+@media (max-width: 768px) {
+    .tech-modal-content {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    
+    .tech-modal-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .tech-modal-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .tech-icon-emoji {
+        font-size: 2rem;
+    }
+    
+    .tech-modal-content h2 {
+        font-size: 1.5rem;
+    }
+}
+

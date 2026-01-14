@@ -630,17 +630,101 @@ const typingEffect = (() => {
 })();
 
 
-// Module for tech item documentation links
+// Technology descriptions for the info modal
+const techDescriptions = {
+    'Python': 'A versatile, high-level programming language known for its readability and broad ecosystem. Widely used in AI/ML, web development, data science, and automation.',
+    'Java': 'A robust, object-oriented programming language designed for cross-platform compatibility. Popular for enterprise applications, Android development, and large-scale systems.',
+    'JavaScript': 'The language of the web, enabling interactive and dynamic content in browsers. Also used server-side with Node.js for full-stack development.',
+    'C': 'A foundational low-level programming language offering direct memory access and high performance. Essential for system programming, embedded systems, and performance-critical applications.',
+    'React': 'A popular JavaScript library for building user interfaces with reusable components. Created by Facebook, it uses a virtual DOM for efficient updates and supports modern web development patterns.',
+    'Node.js': 'A JavaScript runtime built on Chrome\'s V8 engine that enables server-side JavaScript execution. Great for building scalable network applications and APIs.',
+    'TypeScript': 'A typed superset of JavaScript that compiles to plain JavaScript. Adds static typing, interfaces, and better tooling support for large-scale applications.',
+    'CSS': 'Cascading Style Sheets - the styling language for the web. Controls layout, colors, fonts, and responsive design for HTML documents.',
+    'AWS': 'Amazon Web Services - a comprehensive cloud computing platform offering 200+ services including compute, storage, databases, and AI/ML tools.',
+    'Git': 'A distributed version control system for tracking code changes and collaborating with teams. The industry standard for source code management.',
+    'Linux': 'An open-source operating system kernel powering servers, supercomputers, and embedded devices worldwide. Known for stability, security, and flexibility.',
+    'Bash': 'The Bourne Again SHell - a command-line interpreter for Unix/Linux systems. Essential for scripting, automation, and system administration.',
+    'PyTorch': 'An open-source deep learning framework known for its dynamic computation graphs and Pythonic interface. Popular in research and production AI systems.',
+    'TensorFlow': 'Google\'s open-source machine learning framework for building and deploying ML models. Supports both research prototyping and production deployment at scale.',
+    'Hugging Face': 'A platform and library ecosystem for state-of-the-art NLP and ML models. Provides pre-trained models, datasets, and tools for the ML community.',
+    'CNNs': 'Convolutional Neural Networks - deep learning architectures specialized for processing grid-like data such as images. The backbone of modern computer vision.',
+    'Transformers': 'A revolutionary neural network architecture using self-attention mechanisms. The foundation of modern NLP models like BERT, GPT, and LLMs.',
+    'LLMs': 'Large Language Models - AI systems trained on massive text datasets to understand and generate human-like text. Powers chatbots, code assistants, and content generation.',
+    'Computer Vision': 'AI field enabling machines to interpret and understand visual information from the world. Applications include image recognition, object detection, and autonomous vehicles.',
+    'YOLO': 'You Only Look Once - a real-time object detection algorithm known for its speed and accuracy. Processes images in a single forward pass through the network.',
+    'OpenCV': 'Open Source Computer Vision Library - a comprehensive toolkit for image and video processing. Supports real-time applications with optimized algorithms.',
+    'LangChain': 'A framework for building applications with LLMs. Provides tools for prompt management, chains, agents, and integration with various data sources.',
+    'LangGraph': 'An extension of LangChain for building stateful, multi-actor applications with LLMs. Enables complex agent workflows and decision graphs.',
+    'LlamaIndex': 'A data framework for LLM applications. Specializes in connecting custom data sources to large language models for retrieval-augmented generation.',
+    'OpenAI API': 'The API for accessing OpenAI\'s powerful language models including GPT-4. Enables text generation, code completion, image generation, and more.',
+    'Anthropic Claude': 'An AI assistant built by Anthropic focused on being helpful, harmless, and honest. Known for nuanced reasoning and following complex instructions.',
+    'CrewAI': 'A framework for orchestrating role-playing AI agents. Enables building multi-agent systems where agents collaborate to accomplish complex tasks.',
+    'AutoGen': 'Microsoft\'s framework for building multi-agent conversational AI systems. Supports customizable agents that can converse, execute code, and collaborate.'
+};
+
+// Module for tech item info modal
 const techItemHandler = (() => {
+    const techInfoModal = document.getElementById('techInfoModal');
+    const techModalTitle = document.getElementById('techModalTitle');
+    const techModalIcon = document.getElementById('techModalIcon');
+    const techModalDescription = document.getElementById('techModalDescription');
+    const techModalDocLink = document.getElementById('techModalDocLink');
+    const techInfoModalCloseBtn = techInfoModal ? techInfoModal.querySelector('.close-button') : null;
+    const body = document.body;
+
     const init = () => {
-        document.querySelectorAll('.tech-item[data-doc-link]').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const docLink = item.getAttribute('data-doc-link');
-                if (docLink) {
-                    window.open(docLink, '_blank');
-                }
+        if (techInfoModal && techModalTitle && techModalDescription && techModalDocLink && techInfoModalCloseBtn) {
+            document.querySelectorAll('.tech-item[data-doc-link]').forEach(item => {
+                item.addEventListener('click', openTechModal);
             });
-        });
+            techInfoModalCloseBtn.addEventListener('click', closeTechModal);
+            techInfoModal.addEventListener('click', handleOutsideClick);
+            document.addEventListener('keydown', handleEscapeKey);
+        }
+    };
+
+    const openTechModal = (e) => {
+        const item = e.currentTarget;
+        const techName = item.getAttribute('data-tech');
+        const docLink = item.getAttribute('data-doc-link');
+        
+        // Get icon - either an image or emoji text
+        const iconImg = item.querySelector('img');
+        const iconText = item.querySelector('.tech-icon-text');
+        
+        if (iconImg) {
+            techModalIcon.innerHTML = `<img src="${iconImg.src}" alt="${techName}">`;
+        } else if (iconText) {
+            techModalIcon.innerHTML = `<span class="tech-icon-emoji">${iconText.textContent}</span>`;
+        }
+        
+        techModalTitle.textContent = techName;
+        techModalDescription.textContent = techDescriptions[techName] || `${techName} is a technology used in modern software development.`;
+        techModalDocLink.href = docLink;
+        
+        techInfoModal.style.display = 'flex';
+        techInfoModal.classList.add('active');
+        body.classList.add('modal-open');
+    };
+
+    const closeTechModal = () => {
+        techInfoModal.classList.remove('active');
+        setTimeout(() => {
+            techInfoModal.style.display = 'none';
+            body.classList.remove('modal-open');
+        }, 300);
+    };
+
+    const handleOutsideClick = (e) => {
+        if (e.target === techInfoModal) {
+            closeTechModal();
+        }
+    };
+
+    const handleEscapeKey = (e) => {
+        if (e.key === "Escape" && techInfoModal.classList.contains('active')) {
+            closeTechModal();
+        }
     };
 
     return {
