@@ -344,8 +344,10 @@ const projectDetailModalHandler = (() => {
 
         // Handle demo link
         const demoLink = card.dataset.demoLink;
+        const linkLabel = card.dataset.linkLabel || 'Demo';
         if (demoLink && projectModalDemoLink) {
             projectModalDemoLink.href = demoLink;
+            projectModalDemoLink.textContent = `▶ ${linkLabel}`;
             projectModalDemoLink.style.display = 'flex';
         } else if (projectModalDemoLink) {
             projectModalDemoLink.style.display = 'none';
