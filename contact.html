@@ -58,6 +58,11 @@
                     </div>
                 </div>
                 
+                <div style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    <span>👁️ Visitors: </span>
+                    <span id="visitor-count" style="color: var(--accent-color); font-weight: bold;">Loading...</span>
+                </div>
+                
                 <div class="content-card-contact fade-in">
                     <div class="contact-layout">
                         <div class="contact-form-container">
@@ -185,6 +190,48 @@
                     submitButton.innerHTML = originalButtonText;
                 });
         });
+
+        // Visitor Counter using CountAPI
+        (function() {
+            const namespace = 'saakshigupta-portfolio';
+            const key = 'visitor-count';
+            const apiUrl = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+            const getUrl = `https://api.countapi.xyz/get/${namespace}/${key}`;
+
+            // First, get the current count
+            fetch(getUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.value !== undefined) {
+                        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+                    }
+                })
+                .catch(() => {
+                    // If get fails, try to hit (increment) which will create it
+                    fetch(apiUrl)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.value !== undefined) {
+                                document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+                            }
+                        })
+                        .catch(() => {
+                            document.getElementById('visitor-count').textContent = 'N/A';
+                        });
+                });
+
+            // Increment the counter
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.value !== undefined) {
+                        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+                    }
+                })
+                .catch(() => {
+                    // Silently fail if API is unavailable
+                });
+        })();
     </script>
 </body>
 </html>
