@@ -62,6 +62,11 @@
                         <img src="images/icons/email-icon.png" alt="Email">
                     </a>
                 </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.75rem;">
+                    <span>Visitors: </span>
+                    <span id="visitor-count" style="color: var(--accent-color); font-weight: bold;">Loading...</span>
+                </div>
             </div>
         </aside>
 
@@ -236,11 +241,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.75rem;">
-                    <span>Visitors: </span>
-                    <span id="visitor-count" style="color: var(--accent-color); font-weight: bold;">Loading...</span>
                 </div>
             </section>
 
@@ -537,40 +537,26 @@
             const namespace = 'saakshigupta-portfolio';
             const key = 'visitor-count';
             const apiUrl = `https://api.countapi.xyz/hit/${namespace}/${key}`;
-            const getUrl = `https://api.countapi.xyz/get/${namespace}/${key}`;
+            const visitorCountEl = document.getElementById('visitor-count');
 
-            // First, get the current count
-            fetch(getUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.value !== undefined) {
-                        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
-                    }
-                })
-                .catch(() => {
-                    // If get fails, try to hit (increment) which will create it
-                    fetch(apiUrl)
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.value !== undefined) {
-                                document.getElementById('visitor-count').textContent = data.value.toLocaleString();
-                            }
-                        })
-                        .catch(() => {
-                            document.getElementById('visitor-count').textContent = 'N/A';
-                        });
-                });
-
-            // Increment the counter
+            // Increment the counter - this will create it if it doesn't exist
             fetch(apiUrl)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.value !== undefined) {
-                        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+                        visitorCountEl.textContent = data.value.toLocaleString();
+                    } else {
+                        visitorCountEl.textContent = 'N/A';
                     }
                 })
-                .catch(() => {
-                    // Silently fail if API is unavailable
+                .catch(error => {
+                    console.error('Visitor counter error:', error);
+                    visitorCountEl.textContent = 'N/A';
                 });
         })();
     </script>
