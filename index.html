@@ -62,11 +62,6 @@
                         <img src="images/icons/email-icon.png" alt="Email">
                     </a>
                 </div>
-                
-                <div style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.75rem;">
-                    <span>Visitors: </span>
-                    <span id="visitor-count" style="color: var(--accent-color); font-weight: bold;">Loading...</span>
-                </div>
             </div>
         </aside>
 
@@ -531,35 +526,6 @@
     </button>
 
     <script src="js/main.js"></script>
-    <script>
-        // Visitor Counter using CountAPI
-        (function() {
-            const namespace = 'saakshigupta-portfolio';
-            const key = 'visitor-count';
-            const apiUrl = `https://api.countapi.xyz/hit/${namespace}/${key}`;
-            const visitorCountEl = document.getElementById('visitor-count');
-
-            // Increment the counter - this will create it if it doesn't exist
-            fetch(apiUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.value !== undefined) {
-                        visitorCountEl.textContent = data.value.toLocaleString();
-                    } else {
-                        visitorCountEl.textContent = 'N/A';
-                    }
-                })
-                .catch(error => {
-                    console.error('Visitor counter error:', error);
-                    visitorCountEl.textContent = 'N/A';
-                });
-        })();
-    </script>
 </body>
 </html>
 
