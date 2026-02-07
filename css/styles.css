@@ -320,19 +320,18 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    gap: 0.4rem;
+    padding: 0.45rem 0.75rem;
     margin-bottom: 0.75rem;
-    background-color: transparent;
-    border: 1.5px solid var(--accent-primary);
+    background-color: var(--bg-tertiary);
+    border: none;
     border-radius: 8px;
     color: var(--accent-primary);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-family: 'JetBrains Mono', monospace;
     transition: all var(--transition-speed) ease;
-    width: 100%;
-    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .schedule-meeting-btn:hover {
@@ -1234,6 +1233,32 @@ em {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+}
+
+.contact-calendly-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(34, 211, 238, 0.08);
+    border: 1.5px solid var(--accent-primary);
+    border-radius: 8px;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-calendly-btn:hover {
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.contact-calendly-btn svg {
+    flex-shrink: 0;
 }
 
 /* Contact Form Styles */
