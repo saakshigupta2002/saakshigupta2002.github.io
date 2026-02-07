@@ -323,7 +323,7 @@ body.menu-open {
     gap: 0.4rem;
     padding: 0.45rem 0.75rem;
     margin-top: auto;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     background-color: var(--bg-tertiary);
     border: none;
     border-radius: 8px;
