@@ -336,9 +336,11 @@ body.menu-open {
 }
 
 .schedule-meeting-btn:hover {
-    background-color: var(--accent-primary);
-    color: var(--bg-primary);
+    background-color: rgba(34, 211, 238, 0.15);
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.3);
 }
 
 .schedule-meeting-btn svg {
@@ -1190,9 +1192,10 @@ em {
 }
 
 .contact-button:hover {
-    background-color: var(--accent-primary);
-    color: var(--bg-primary);
+    background-color: rgba(34, 211, 238, 0.15);
+    color: var(--accent-primary);
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
 }
 
 .contact-button img {
@@ -1253,9 +1256,10 @@ em {
 }
 
 .contact-calendly-btn:hover {
-    background-color: var(--accent-primary);
-    color: var(--bg-primary);
+    background-color: rgba(34, 211, 238, 0.15);
+    color: var(--accent-primary);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
 }
 
 .contact-calendly-btn svg {
