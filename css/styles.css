@@ -344,6 +344,16 @@ body.menu-open {
     height: 20px;
 }
 
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-primary);
+}
+
+.social-link:hover svg {
+    color: var(--bg-primary);
+}
+
 /* Main Content */
 .main-content {
     margin-left: var(--sidebar-width);
