@@ -75,160 +75,126 @@
                 </p>
 
                 <div class="projects-grid">
-                    <a href="https://github.com/pydantic/pydantic-ai/pull/4437" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>Pydantic AI</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contributions: 2026</p>
-                            <p>Contributed to Pydantic AI, a Python agent framework from the creators of Pydantic. Wrapped Google streaming errors as ModelHTTPError/ModelAPIError and added extra_headers support for the Google model provider.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">LLMs</span>
-                                <span class="tech-pill">AI Frameworks</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/pydantic/pydantic-ai/pull/4437', '_blank');">PR #4437 →</span>
-                                <span class="blog-read-btn" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/pydantic/pydantic-ai/pull/4241', '_blank');">PR #4241 →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #4437: Wrap Google streaming errors as ModelHTTPError/ModelAPIError","desc":"Wrapped Google Gemini streaming errors so they surface as structured ModelHTTPError and ModelAPIError exceptions instead of raw transport failures. This gives callers consistent, typed error handling across all model providers in Pydantic AI.","url":"https://github.com/pydantic/pydantic-ai/pull/4437"},{"title":"PR #4241: Add extra_headers support for Google model provider","desc":"Added support for passing custom extra_headers to the Google Gemini model provider, enabling users to inject authentication headers, tracing IDs, and other metadata into API requests without monkey-patching the client.","url":"https://github.com/pydantic/pydantic-ai/pull/4241"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>Pydantic AI</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contributions: 2026</p>
+                        <p>Contributed to Pydantic AI, a Python agent framework from the creators of Pydantic. Wrapped Google streaming errors as ModelHTTPError/ModelAPIError and added extra_headers support for the Google model provider.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">LLMs</span>
+                            <span class="tech-pill">AI Frameworks</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/NVIDIA/Megatron-LM/pull/3300" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>NVIDIA Megatron-LM</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to NVIDIA's Megatron-LM, a large-scale distributed training framework for transformer models. Fixed forwarding of the use_te_activation_func flag in non-MoE GPT layer spec.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">Deep Learning</span>
-                                <span class="tech-pill">Distributed Training</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #3300: Forward use_te_activation_func flag in non-MoE GPT layer spec","desc":"Fixed a bug where the use_te_activation_func configuration flag was not being forwarded through the non-MoE GPT layer specification, causing Transformer Engine activation functions to be silently ignored during model initialization in distributed training setups.","url":"https://github.com/NVIDIA/Megatron-LM/pull/3300"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>NVIDIA Megatron-LM</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to NVIDIA's Megatron-LM, a large-scale distributed training framework for transformer models. Fixed forwarding of the use_te_activation_func flag in non-MoE GPT layer spec.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Deep Learning</span>
+                            <span class="tech-pill">Distributed Training</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/langchain-ai/langchainjs/pull/9940" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>LangChain.js</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to LangChain.js, the JavaScript/TypeScript implementation of the LangChain framework. Fixed correctly round-tripping annotations in Responses API multi-turn conversations.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">TypeScript</span>
-                                <span class="tech-pill">LLMs</span>
-                                <span class="tech-pill">AI Frameworks</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #9940: Correctly round-trip annotations in Responses API multi-turn conversations","desc":"Fixed an issue where message annotations (citations, file references, etc.) were lost during multi-turn conversations with the OpenAI Responses API. The fix ensures annotations are correctly serialized and deserialized across conversation turns, preserving the full context for downstream consumers.","url":"https://github.com/langchain-ai/langchainjs/pull/9940"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>LangChain.js</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to LangChain.js, the JavaScript/TypeScript implementation of the LangChain framework. Fixed correctly round-tripping annotations in Responses API multi-turn conversations.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">TypeScript</span>
+                            <span class="tech-pill">LLMs</span>
+                            <span class="tech-pill">AI Frameworks</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/langchain-ai/deepagents/pull/1151" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>DeepAgents</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to DeepAgents by LangChain, a framework for building deep research agents. Hardened dictionary iteration and improved HITL (human-in-the-loop) fallback handling in the CLI.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">AI Agents</span>
-                                <span class="tech-pill">CLI</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #1151: Harden dictionary iteration and HITL fallback handling","desc":"Fixed runtime errors caused by dictionary mutation during iteration in the CLI agent loop, and improved the human-in-the-loop (HITL) fallback handling to gracefully degrade when user input is unavailable instead of crashing the agent pipeline.","url":"https://github.com/langchain-ai/deepagents/pull/1151"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>DeepAgents</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to DeepAgents by LangChain, a framework for building deep research agents. Hardened dictionary iteration and improved HITL (human-in-the-loop) fallback handling in the CLI.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">AI Agents</span>
+                            <span class="tech-pill">CLI</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/sooperset/mcp-atlassian/pull/900" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>MCP Atlassian</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to MCP Atlassian, a Model Context Protocol server for Jira and Confluence. Added explicit pattern validation for Jira issue and project keys to improve input safety.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">MCP</span>
-                                <span class="tech-pill">Jira</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #900: Add explicit pattern validation for Jira issue and project keys","desc":"Added regex-based input validation for Jira issue keys (e.g. PROJ-123) and project keys to prevent injection of malformed identifiers into JQL queries and API calls. This hardens the MCP server against unexpected input from LLM orchestrators.","url":"https://github.com/sooperset/mcp-atlassian/pull/900"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>MCP Atlassian</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to MCP Atlassian, a Model Context Protocol server for Jira and Confluence. Added explicit pattern validation for Jira issue and project keys to improve input safety.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">MCP</span>
+                            <span class="tech-pill">Jira</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/langchain-ai/langchain/pull/34816" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>LangChain</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to LangChain, a framework for developing applications powered by large language models. Enhanced functionality and improved developer experience.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">LLMs</span>
-                                <span class="tech-pill">AI Frameworks</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #34816: Avoid UnboundLocalError when no AIMessage exists","desc":"Fixed an UnboundLocalError that occurred when processing conversation histories that contained no AIMessage. The fix adds a guard check before accessing the variable, preventing crashes in edge cases where the LLM has not yet produced a response.","url":"https://github.com/langchain-ai/langchain/pull/34816"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>LangChain</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to LangChain, a framework for developing applications powered by large language models. Enhanced functionality and improved developer experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">LLMs</span>
+                            <span class="tech-pill">AI Frameworks</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/matplotlib/matplotlib/pull/31091" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>Matplotlib</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contribution: 2026</p>
-                            <p>Contributed to Matplotlib, a comprehensive library for creating static, animated, and interactive visualizations in Python. Improved plotting functionality and documentation.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">Data Visualization</span>
-                                <span class="tech-pill">Scientific Computing</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn">View Pull Request →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #31091: Fix IndexLocator.tick_values returning values greater than vmax","desc":"Fixed a bug in IndexLocator where tick_values() could return tick positions beyond the axis maximum (vmax), causing extra ticks to appear outside the visible data range. The fix clamps the returned values to the valid [vmin, vmax] interval.","url":"https://github.com/matplotlib/matplotlib/pull/31091"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>Matplotlib</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contribution: 2026</p>
+                        <p>Contributed to Matplotlib, a comprehensive library for creating static, animated, and interactive visualizations in Python. Improved plotting functionality and documentation.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Data Visualization</span>
+                            <span class="tech-pill">Scientific Computing</span>
+                        </div>
+                    </div>
 
-                    <a href="https://github.com/deepset-ai/haystack-core-integrations/pull/2819" target="_blank" class="os-card-link">
-                        <div class="project-card blog-card-style">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                <h3>Haystack</h3>
-                                <span class="os-status merged">Merged</span>
-                            </div>
-                            <p class="blog-date">Contributions: 2026</p>
-                            <p>Contributed to Haystack, an open-source framework for building production-ready LLM applications and search systems. Added metadata query operations to ChromaDocumentStore and an SQLRetriever to ElasticsearchDocumentStore.</p>
-                            <div class="project-tech">
-                                <span class="tech-pill">Python</span>
-                                <span class="tech-pill">RAG</span>
-                                <span class="tech-pill">LLMs</span>
-                                <span class="tech-pill">Search</span>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap;">
-                                <span class="blog-read-btn" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/deepset-ai/haystack-core-integrations/pull/2819', '_blank');">PR #2819 →</span>
-                                <span class="blog-read-btn" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/deepset-ai/haystack-core-integrations/pull/2801', '_blank');">PR #2801 →</span>
-                            </div>
+                    <div class="project-card blog-card-style os-card"
+                         data-prs='[{"title":"PR #2819: Add metadata query operations to ChromaDocumentStore","desc":"Added support for metadata-based filtering operations (equals, not equals, greater than, less than, in, etc.) to the ChromaDocumentStore integration, enabling users to perform fine-grained document retrieval based on metadata fields.","url":"https://github.com/deepset-ai/haystack-core-integrations/pull/2819"},{"title":"PR #2801: Add SQLRetriever to ElasticsearchDocumentStore","desc":"Implemented an SQLRetriever component for the ElasticsearchDocumentStore integration, allowing users to query documents using Elasticsearch SQL syntax for more familiar and expressive document retrieval patterns.","url":"https://github.com/deepset-ai/haystack-core-integrations/pull/2801"}]'>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3>Haystack</h3>
+                            <span class="os-status merged">Merged</span>
                         </div>
-                    </a>
+                        <p class="blog-date">Contributions: 2026</p>
+                        <p>Contributed to Haystack, an open-source framework for building production-ready LLM applications and search systems. Added metadata query operations to ChromaDocumentStore and an SQLRetriever to ElasticsearchDocumentStore.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">RAG</span>
+                            <span class="tech-pill">LLMs</span>
+                            <span class="tech-pill">Search</span>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -237,6 +203,30 @@
     <div class="footer-background">
         <div class="contact-footer">
             <p>© 2026 Saakshi Gupta. All rights reserved.<br>Made with ❤️ using HTML, CSS, and JavaScript.</p>
+        </div>
+    </div>
+
+    <!-- OS PR Picker Modal -->
+    <div id="osPrPickerModal" class="modal">
+        <span class="close-button">&times;</span>
+        <div class="os-modal-content">
+            <h2 id="osPrPickerTitle">Select a Pull Request</h2>
+            <div id="osPrPickerList" class="os-pr-picker"></div>
+        </div>
+    </div>
+
+    <!-- OS PR Detail Modal -->
+    <div id="osDetailModal" class="modal">
+        <span class="close-button">&times;</span>
+        <div class="os-modal-content">
+            <h2 id="osDetailTitle"></h2>
+            <p id="osDetailDesc" class="os-modal-desc"></p>
+            <div id="osDetailTech" class="project-tech"></div>
+            <div class="project-modal-links">
+                <a id="osDetailLink" href="#" target="_blank" class="github-button">
+                    <img src="images/icons/github-icon.png" alt="GitHub Icon"> View on GitHub
+                </a>
+            </div>
         </div>
     </div>
 

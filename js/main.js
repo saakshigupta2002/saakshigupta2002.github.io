@@ -734,6 +734,99 @@ const techItemHandler = (() => {
     };
 })();
 
+// Module for open source PR modals
+const osModalHandler = (() => {
+    const prPickerModal = document.getElementById('osPrPickerModal');
+    const prPickerTitle = document.getElementById('osPrPickerTitle');
+    const prPickerList = document.getElementById('osPrPickerList');
+    const detailModal = document.getElementById('osDetailModal');
+    const detailTitle = document.getElementById('osDetailTitle');
+    const detailDesc = document.getElementById('osDetailDesc');
+    const detailTech = document.getElementById('osDetailTech');
+    const detailLink = document.getElementById('osDetailLink');
+    const body = document.body;
+
+    let currentCardTechPills = [];
+
+    const init = () => {
+        if (!prPickerModal || !detailModal) return;
+
+        document.querySelectorAll('.os-card').forEach(card => {
+            card.addEventListener('click', handleCardClick);
+        });
+
+        prPickerModal.querySelector('.close-button').addEventListener('click', () => closeModal(prPickerModal));
+        detailModal.querySelector('.close-button').addEventListener('click', () => closeModal(detailModal));
+        prPickerModal.addEventListener('click', (e) => { if (e.target === prPickerModal) closeModal(prPickerModal); });
+        detailModal.addEventListener('click', (e) => { if (e.target === detailModal) closeModal(detailModal); });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (detailModal.classList.contains('active')) closeModal(detailModal);
+                else if (prPickerModal.classList.contains('active')) closeModal(prPickerModal);
+            }
+        });
+    };
+
+    const handleCardClick = (e) => {
+        const card = e.currentTarget;
+        const prs = JSON.parse(card.dataset.prs);
+        currentCardTechPills = Array.from(card.querySelectorAll('.tech-pill')).map(p => p.textContent);
+        const projectName = card.querySelector('h3').textContent;
+
+        if (prs.length === 1) {
+            openDetailModal(prs[0]);
+        } else {
+            openPickerModal(projectName, prs);
+        }
+    };
+
+    const openPickerModal = (projectName, prs) => {
+        prPickerTitle.textContent = projectName + ' — Select a Pull Request';
+        prPickerList.innerHTML = '';
+        prs.forEach(pr => {
+            const btn = document.createElement('button');
+            btn.classList.add('os-pr-item');
+            btn.textContent = pr.title;
+            btn.addEventListener('click', () => {
+                closeModal(prPickerModal);
+                setTimeout(() => openDetailModal(pr), 320);
+            });
+            prPickerList.appendChild(btn);
+        });
+        openModal(prPickerModal);
+    };
+
+    const openDetailModal = (pr) => {
+        detailTitle.textContent = pr.title;
+        detailDesc.textContent = pr.desc;
+        detailLink.href = pr.url;
+        detailTech.innerHTML = '';
+        currentCardTechPills.forEach(text => {
+            const pill = document.createElement('span');
+            pill.classList.add('tech-pill');
+            pill.textContent = text;
+            detailTech.appendChild(pill);
+        });
+        openModal(detailModal);
+    };
+
+    const openModal = (modal) => {
+        modal.style.display = 'flex';
+        requestAnimationFrame(() => modal.classList.add('active'));
+        body.classList.add('modal-open');
+    };
+
+    const closeModal = (modal) => {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            body.classList.remove('modal-open');
+        }, 300);
+    };
+
+    return { init };
+})();
+
 // Initialize all modules when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     mobileMenuHandler.init();
@@ -745,4 +838,5 @@ document.addEventListener('DOMContentLoaded', () => {
     rippleEffect.init();
     typingEffect.init();
     techItemHandler.init();
+    osModalHandler.init();
 });
