@@ -773,11 +773,7 @@ const osModalHandler = (() => {
         currentCardTechPills = Array.from(card.querySelectorAll('.tech-pill')).map(p => p.textContent);
         const projectName = card.querySelector('h3').textContent;
 
-        if (prs.length === 1) {
-            openDetailModal(prs[0]);
-        } else {
-            openPickerModal(projectName, prs);
-        }
+        openPickerModal(projectName, prs);
     };
 
     const openPickerModal = (projectName, prs) => {
