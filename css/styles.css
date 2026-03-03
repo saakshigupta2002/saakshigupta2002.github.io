@@ -2516,3 +2516,38 @@ a:hover:not(.timeline-link):not(.publication-link) {
     }
 }
 
+/* Open Source page card styles */
+.opensource-page .project-card.blog-card-style {
+    cursor: pointer;
+}
+
+a.os-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a.os-card-link:hover .project-card.blog-card-style {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.3);
+    border-color: var(--accent-primary);
+}
+
+.os-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.os-status.merged {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
