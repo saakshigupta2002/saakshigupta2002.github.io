@@ -298,7 +298,7 @@ const projectDetailModalHandler = (() => {
 
     const init = () => {
         if (projectDetailModal && projectModalTitle && projectModalDescription && projectModalTech && projectModalGithubLink && projectModalImages && projectDetailModalCloseBtn) {
-            document.querySelectorAll('.project-card').forEach(card => {
+            document.querySelectorAll('.project-card:not(.os-card)').forEach(card => {
                 card.addEventListener('click', openProjectModal);
             });
             projectDetailModalCloseBtn.addEventListener('click', closeProjectModal);
