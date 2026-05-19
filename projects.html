@@ -74,6 +74,26 @@
                 </div>
                 
                 <div class="projects-grid">
+                    <div class="project-card" id="sre-agent-swarm"
+                        data-full-description="A production-grade, self-healing SRE control plane built as a 6-agent swarm (Observer, Diagnoser, Remediator, Safety, Orchestrator, Learner) over NATS JetStream. Monitors 10+ polyglot microservices, performs LLM-assisted root cause analysis with Gemini/OpenAI fallback chain, enforces safety gates with human-in-the-loop approvals via a React dashboard, executes YAML runbook-based remediation, and scores MTTD/MTTR with chaos engineering scenarios. The Learner agent uses RAG over ChromaDB to recommend runbooks from historical incidents."
+                        data-github-link="https://github.com/saakshigupta2002/sre-agent-swarm">
+                        <h3>SRE Agent Swarm <span class="project-company">Autonomous Incident Response Platform</span></h3>
+                        <p>A production-grade, self-healing SRE control plane built as a 6-agent swarm (Observer, Diagnoser, Remediator, Safety, Orchestrator, Learner) over NATS JetStream. Monitors 10+ polyglot microservices, performs LLM-assisted root cause analysis with Gemini/OpenAI fallback chain, enforces safety gates with human-in-the-loop approvals via a React dashboard, executes YAML runbook-based remediation, and scores MTTD/MTTR with chaos engineering scenarios. The Learner agent uses RAG over ChromaDB to recommend runbooks from historical incidents.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Go</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">NATS JetStream</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Prometheus</span>
+                            <span class="tech-pill">Loki</span>
+                            <span class="tech-pill">Tempo</span>
+                            <span class="tech-pill">ChromaDB</span>
+                            <span class="tech-pill">Docker</span>
+                        </div>
+                    </div>
+
                     <div class="project-card" id="pr-orchestrator-mcp"
                         data-full-description="PR Orchestrator MCP is a tools-only MCP (Model Context Protocol) server that enables LLM orchestrators (like Claude, Cursor, or custom agents) to safely automate GitHub pull request creation workflows. It provides a controlled environment for AI agents to fix issues, run tests, and create PRs without compromising security. The project implements a safety-first design with isolated E2B sandbox execution, command allowlisting, fork-only workflow, multi-layer approval gates, secret redaction, and repository allowlist enforcement. Key features include automated fork creation and management, Git operations (clone, branch, commit, push), code editing via file operations and unified diffs, quality assurance (tests, linting, type checking, formatting), GitHub API integration (issue retrieval, PR creation), and artifact bundling for audit trails. Built with Python 3.11+, MCP SDK, E2B SDK, and FastMCP framework."
                         data-github-link="https://github.com/saakshigupta2002/PR_Orchestrator_MCP"
